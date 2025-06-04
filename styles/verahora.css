@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f0f0f 0%, #000 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.movie-title {
+  margin-bottom: 30px;
+}
+
+.movie-title h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #ff0000;
+  text-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+}
+
+.movie-title h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  animation: glow 1.5s infinite alternate;
+}
+
+.movie-title h3 {
+  font-size: 1.3rem;
+  color: #aaaaaa;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.01);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(229, 9, 20, 1);
+  }
+}

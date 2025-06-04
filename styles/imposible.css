@@ -1,0 +1,94 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #000;
+}
+
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    z-index: 1000;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    background: #333;
+}
+
+.nav-item.active {
+    background: #e50914;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../img/fondomisionimposible.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.title {
+  width: 500px; /* Aumentado */
+  max-width: 90%;
+  margin-bottom: 25px;
+}
+
+.watch-button {
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.watch-button:hover {
+  background-color: #009aa8;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.thumbnails img {
+  width: 140px; /* Aumentado */
+  height: 90px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.05);
+}

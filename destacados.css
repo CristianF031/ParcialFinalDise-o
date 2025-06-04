@@ -1,6 +1,6 @@
 /* destacados.css */
 :root {
-  --primary-color: #00f7ff;
+  --primary-color: #e50914;
   --dark-bg: #0a0a0a;
   --secondary-bg: #1a1a1a;
   --text-color: #ffffff;
@@ -35,7 +35,7 @@ body {
   font-size: 2.5rem;
   color: var(--primary-color);
   font-weight: 700;
-  text-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+  text-shadow: #e50914;
 }
 
 .main-nav {

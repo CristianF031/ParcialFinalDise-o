@@ -1,94 +1,155 @@
-body, html {
+/* === Reset básico === */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: sans-serif;
-  background-color: #000;
 }
 
-
-.main-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #1a1a1a;
-    padding: 1rem;
-    display: flex;
-    gap: 2rem;
-    z-index: 1000;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.5;
 }
 
-.nav-item {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.nav-item:hover {
-    background: #333;
-}
-
-.nav-item.active {
-    background: #007bff;
-}
+/* === Contenedor general === */
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* === Título de sección === */
+.movie-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
   position: relative;
+}
+
+.movie-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #e50914;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* === Grid de películas === */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* === Tarjeta de película === */
+.movie-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* === Imagen con overlay === */
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
   width: 100%;
-  height: 100vh;
-  background: url('../img/spiderman.jpg') no-repeat center center/cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.movie-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 40px 60px;
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
 }
 
-.main-content {
-  text-align: left;
-  margin-bottom: 20px;
+.movie-card:hover .overlay {
+  opacity: 1;
 }
 
-.title {
-  width: 500px; /* Aumentado */
-  max-width: 90%;
-  margin-bottom: 25px;
-}
-
-.watch-button {
-  background-color: #00c8d7;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
+/* === Botón de detalles === */
+.btn-details {
+  padding: 12px 24px;
+  background-color: #e50914;
+  color: #fff;
   border: none;
-  padding: 14px 32px;
-  border-radius: 30px;
+  border-radius: 4px;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.watch-button:hover {
-  background-color: #009aa8;
+.btn-details:hover {
+  background-color: #bf0810;
 }
 
-.thumbnails {
-  display: flex;
-  justify-content: flex-start;
-  gap: 25px;
-  margin-top: 20px;
+/* === Contenido de la tarjeta === */
+.card-content {
+  padding: 20px;
+  text-align: left;
 }
 
-.thumbnails img {
-  width: 140px; /* Aumentado */
-  height: 90px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #ffffff;
 }
 
-.thumbnails img:hover {
-  transform: scale(1.05);
+.card-content p {
+  font-size: 0.95rem;
+  color: #cccccc;
 }
+
+/* === Responsive: ajustes menores en pantallas pequeñas === */
+@media (max-width: 480px) {
+  .movie-section h2 {
+    font-size: 2rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-details {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.header {
+      display: flex;
+      align-items: center;
+      padding: 20px 5%;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+    }

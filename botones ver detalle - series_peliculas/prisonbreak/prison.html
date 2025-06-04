@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Break - Detalles</title>
+    <link rel="stylesheet" href="prison.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>PRISON BREAK</h1>
+                <p class="short-description">Un ingeniero se hace encarcelar para rescatar a su hermano, condenado injustamente a muerte. Con un plan tatuado en su cuerpo, lidera una arriesgada fuga mientras descubre una conspiración.</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <button class="details-btn" id="detailsBtn">Ver Detalles</button>
+            
+            <div class="details-content" id="detailsContent">
+                <h3>Sinopsis Completa</h3>
+                <p>Prison Break es una serie de acción y suspenso que sigue a Michael Scofield, un brillante ingeniero estructural que idea un elaborado plan para rescatar a su hermano, Lincoln Burrows, quien ha sido condenado injustamente a muerte por un crimen que no cometió. Para llevar a cabo su plan, Michael se hace encarcelar en la misma prisión de máxima seguridad donde está su hermano.</p>
+                
+                <p>Con un complejo plano de la prisión tatuado en su cuerpo, Michael lidera un grupo de reclusos en una arriesgada fuga. A medida que avanza la trama, descubre que su hermano fue víctima de una conspiración gubernamental mucho más grande de lo que imaginaba, involucrando a altos funcionarios y corporaciones poderosas.</p>
+                
+                <h3>Personajes Principales</h3>
+                <div class="characters">
+                    <div class="character">
+                        <img src="/img/michael.jpg" alt="Michael Scofield" class="character-img">
+                        <div class="character-name">Michael Scofield</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/lincoln burrows.jpg" alt="Lincoln Burrows" class="character-img">
+                        <div class="character-name">Lincoln Burrows</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/sara.jpg" alt="Sara Tancredi" class="character-img">
+                        <div class="character-name">Sara Tancredi</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/tbag.jpg" alt="T-Bag" class="character-img">
+                        <div class="character-name">T-Bag</div>
+                    </div>
+                </div>
+                
+                <h3>Temporadas</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Temporada 1</div>
+                        <div class="season-year">2005</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 2</div>
+                        <div class="season-year">2006</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 3</div>
+                        <div class="season-year">2007</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 4</div>
+                        <div class="season-year">2008</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 5</div>
+                        <div class="season-year">2017</div>
+                    </div>
+                </div>
+                
+                <h3>Recepción Crítica</h3>
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-value">8.3/10</div>
+                    <div>(IMDb)</div>
+                </div>
+                <p>Prison Break fue aclamada por su trama llena de giros inesperados, personajes complejos y suspenso constante. La primera temporada es considerada una de las mejores en la historia de la televisión de suspense.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const detailsBtn = document.getElementById('detailsBtn');
+        const detailsContent = document.getElementById('detailsContent');
+        
+        detailsBtn.addEventListener('click', function() {
+            detailsContent.classList.toggle('active');
+            detailsBtn.classList.toggle('active');
+            
+            if (detailsBtn.classList.contains('active')) {
+                detailsBtn.textContent = 'Ocultar Detalles';
+            } else {
+                detailsBtn.textContent = 'Ver Detalles';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Juego del Calamar - Detalles</title>
+    <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>EL JUEGO DEL CALAMAR</h1>
+                <p class="short-description">Cientos de personas con problemas económicos aceptan una extraña invitación a un juego de supervivencia. Dentro, un premio millonario les espera... pero el peligro es mortal.</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <button class="details-btn" id="detailsBtn">Ver Detalles</button>
+            
+            <div class="details-content" id="detailsContent">
+                <h3>Sinopsis Completa</h3>
+                <p>El Juego del Calamar es un thriller surcoreano que sigue a Seong Gi-hun, un conductor con problemas financieros que es invitado a participar en un misterioso juego de supervivencia. Junto a otros 455 participantes, todos con grandes deudas, compiten en juegos infantiles con consecuencias mortales.</p>
+                
+                <p>A medida que avanzan los juegos, los participantes descubren que tras la competición hay una organización secreta con intenciones siniestras. Con un premio final de 45.600 millones de wones (aproximadamente 38 millones de dólares), los participantes deben decidir cuánto están dispuestos a arriesgar para cambiar sus vidas.</p>
+                
+                <h3>Personajes Principales</h3>
+                <div class="characters">
+                    <div class="character">
+                        <img src="/img/Seong Gi-hun.png" alt="Seong Gi-hun" class="character-img">
+                        <div class="character-name">Seong Gi-hun</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/kang.jpg" alt="Kang Sae-byeok" class="character-img">
+                        <div class="character-name">Kang Sae-byeok</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/Cho.jpg" alt="Cho Sang-woo" class="character-img">
+                        <div class="character-name">Cho Sang-woo</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/oh.jpg" alt="Oh Il-nam" class="character-img">
+                        <div class="character-name">Oh Il-nam</div>
+                    </div>
+                </div>
+                
+                <h3>Temporadas</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Temporada 1</div>
+                        <div class="season-year">2021</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 2</div>
+                        <div class="season-year">2024</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 3</div>
+                        <div class="season-year">2025+</div>
+                    </div>
+                </div>
+                
+                <h3>Recepción Crítica</h3>
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-value">8.0/10</div>
+                    <div>(IMDb)</div>
+                </div>
+                <p>El Juego del Calamar se convirtió en el lanzamiento de serie más visto de Netflix, con más de 1.650 millones de horas vistas en sus primeros 28 días. Recibió elogios por su originalidad, tensión narrativa y comentario social sobre la desigualdad económica.</p>
+
+    <script>
+        const detailsBtn = document.getElementById('detailsBtn');
+        const detailsContent = document.getElementById('detailsContent');
+        
+        detailsBtn.addEventListener('click', function() {
+            detailsContent.classList.toggle('active');
+            detailsBtn.classList.toggle('active');
+            
+            if (detailsBtn.classList.contains('active')) {
+                detailsBtn.textContent = 'Ocultar Detalles';
+            } else {
+                detailsBtn.textContent = 'Ver Detalles';
+            }
+        });
+    </script>
+</body>
+</html>
