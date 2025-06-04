@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar - Detalles</title>
+    <link rel="stylesheet" href="avatar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>AVATAR</h1>
+                <p class="short-description">Un marine parapléjico es enviado a Pandora en una misión única, pero se enfrenta a un dilema cuando se enamora de la cultura de los Na'vi.</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <button class="details-btn" id="detailsBtn">Ver Detalles</button>
+            
+            <div class="details-content" id="detailsContent">
+                <h3>Sinopsis Completa</h3>
+                <p>En el año 2154, Jake Sully, un ex marine confinado a una silla de ruedas, es enviado a la luna Pandora, donde una corporación humana está extrayendo un mineral raro. A través de su avatar (un cuerpo Na'vi controlado a distancia), Jake se infiltra en la tribu de los Na'vi con el fin de obtener información que ayude a la corporación en sus planes de explotación.</p>
+                
+                <p>Sin embargo, Jake se enamora de la cultura Na'vi y de Neytiri, una guerrera Na'vi, lo que lo lleva a un conflicto interno sobre su lealtad. Cuando la corporación decide destruir el árbol sagrado de los Na'vi para acceder al mineral, Jake debe tomar una decisión que cambiará su vida y el destino de Pandora para siempre.</p>
+                
+                <h3>Personajes Principales</h3>
+                <div class="characters">
+                    <div class="character">
+                        <img src="/img/jake.jpg" alt="Jake Sully" class="character-img">
+                        <div class="character-name">Jake Sully</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/ney.jpg" alt="Neytiri" class="character-img">
+                        <div class="character-name">Neytiri</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/coronel.jpg" alt="Colonel Miles Quaritch" class="character-img">
+                        <div class="character-name">Coronel Miles Quaritch</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/grace.jpg" alt="Dr. Grace Augustine" class="character-img">
+                        <div class="character-name">Dra. Grace Augustine</div>
+                    </div>
+                </div>
+                
+                <h3>Información de la Película</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Año</div>
+                        <div class="season-year">2009</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Director</div>
+                        <div class="season-year">James Cameron</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Duración</div>
+                        <div class="season-year">162 min</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Presupuesto</div>
+                        <div class="season-year">$237 millones</div>
+                    </div>
+                </div>
+                
+                <h3>Recepción Crítica</h3>
+                <div class="rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-value">7.8/10</div>
+                    <div>(IMDb)</div>
+                </div>
+                <p>Avatar se convirtió en la película más taquillera de la historia, con una recaudación de más de $2.800 millones. Ganó tres premios Oscar (Mejor Fotografía, Mejores Efectos Visuales y Mejor Dirección de Arte) y fue aclamada por sus innovaciones técnicas y efectos visuales.</p>
+                
+    <script>
+        const detailsBtn = document.getElementById('detailsBtn');
+        const detailsContent = document.getElementById('detailsContent');
+        
+        detailsBtn.addEventListener('click', function() {
+            detailsContent.classList.toggle('active');
+            detailsBtn.classList.toggle('active');
+            
+            if (detailsBtn.classList.contains('active')) {
+                detailsBtn.textContent = 'Ocultar Detalles';
+            } else {
+                detailsBtn.textContent = 'Ver Detalles';
+            }
+        });
+    </script>
+</body>
+</html>

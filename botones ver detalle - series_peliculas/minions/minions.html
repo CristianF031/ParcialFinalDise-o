@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minions - Detalles</title>
+    <link rel="stylesheet" href="minions.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>MINIONS</h1>
+                <p class="short-description">Los minions, pequeñas criaturas amarillas, buscan al villano más malvado para servir, llevándolos a una aventura en la década de 1960 con la super-villana Scarlet Overkill.</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <button class="details-btn" id="detailsBtn">Ver Detalles</button>
+            
+            <div class="details-content" id="detailsContent">
+                <h3>Sinopsis Completa</h3>
+                <p>Los Minions han existido desde el principio de los tiempos, evolucionando de organismos amarillos unicelulares para servir a los amos más despreciables de la historia. Después de dejar sin amo accidentalmente a todos sus jefes, desde T. Rex hasta Napoleón, los Minions caen en una profunda depresión. Pero un minion llamado Kevin tiene un plan, y junto con el adolescente rebelde Stuart y el adorable Bob, decide embarcarse en un viaje para encontrar un nuevo amo malvado al que servir.</p>
+                
+                <p>Su búsqueda los lleva a la Nueva York de los años 60, y luego a Londres, donde deben competir en una convención de villanos para convertirse en los secuaces de Scarlet Overkill, la primera super-villana femenina del mundo. La misión de los Minions: robar la corona de la Reina de Inglaterra. Lo que sigue es una aventura caótica llena de humor, acción y el característico encanto de los Minions.</p>
+                
+                <h3>Personajes Principales</h3>
+                <div class="characters">
+                    <div class="character">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg1MTU2MjY5OV5BMl5BanBnXkFtZTgwNzA5NjYzNjE@._V1_.jpg" alt="Kevin" class="character-img">
+                        <div class="character-name">Kevin</div>
+                    </div>
+                    <div class="character">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg2MzY5NjYzMl5BMl5BanBnXkFtZTgwNzA1MTQzNjE@._V1_.jpg" alt="Stuart" class="character-img">
+                        <div class="character-name">Stuart</div>
+                    </div>
+                    <div class="character">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg0MjE0OTYwOF5BMl5BanBnXkFtZTgwNzA5MTQzNjE@._V1_.jpg" alt="Bob" class="character-img">
+                        <div class="character-name">Bob</div>
+                    </div>
+                    <div class="character">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg2NDMxOTU1OF5BMl5BanBnXkFtZTgwNjY1MTQzNjE@._V1_.jpg" alt="Scarlet Overkill" class="character-img">
+                        <div class="character-name">Scarlet Overkill</div>
+                    </div>
+                </div>
+                
+                <h3>Información de la Película</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Año</div>
+                        <div class="season-year">2015</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Director</div>
+                        <div class="season-year">Kyle Balda</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Duración</div>
+                        <div class="season-year">91 min</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Recaudación</div>
+                        <div class="season-year">$1.159 mil millones</div>
+                    </div>
+                </div>
+                
+                <h3>Recepción Crítica</h3>
+                <div class="rating">
+                    <div class="stars">★★★☆☆</div>
+                    <div class="rating-value">6.4/10</div>
+                    <div>(IMDb)</div>
+                </div>
+                <p>Minions fue un éxito comercial masivo, convirtiéndose en la segunda película animada más taquillera del año 2015. La película fue elogiada por su humor visual y su encanto, aunque algunos críticos señalaron que el humor podría ser repetitivo para los espectadores más adultos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const detailsBtn = document.getElementById('detailsBtn');
+        const detailsContent = document.getElementById('detailsContent');
+        
+        detailsBtn.addEventListener('click', function() {
+            detailsContent.classList.toggle('active');
+            detailsBtn.classList.toggle('active');
+            
+            if (detailsBtn.classList.contains('active')) {
+                detailsBtn.textContent = 'Ocultar Detalles';
+            } else {
+                detailsBtn.textContent = 'Ver Detalles';
+            }
+        });
+    </script>
+</body>
+</html>

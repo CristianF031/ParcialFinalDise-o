@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rápidos y Furiosos 7 - Detalles</title>
+    <link rel="stylesheet" href="rapido.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>RÁPIDOS Y FURIOSOS 7</h1>
+                <p class="short-description">Dom y su equipo se enfrentan a Deckard Shaw, un asesino letal que busca venganza por la muerte de su hermano, mientras lidian con la pérdida de uno de los suyos.</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <button class="details-btn" id="detailsBtn">Ver Detalles</button>
+            
+            <div class="details-content" id="detailsContent">
+                <h3>Sinopsis Completa</h3>
+                <p>Tras derrotar al villano Owen Shaw, Dominic Toretto (Vin Diesel), Brian O'Conner (Paul Walker) y el resto del equipo regresan a Estados Unidos para llevar una vida normal. Pero Deckard Shaw (Jason Statham), el hermano mayor de Owen, aparece buscando venganza. Shaw es un asesino letal y exmiembro de las fuerzas especiales británicas que amenaza con destruir todo lo que Dom ama.</p>
+                
+                <p>Mientras el equipo se une para enfrentar a Shaw, también deben lidiar con la pérdida de uno de sus miembros más queridos. La película es especialmente recordada por ser la última aparición de Paul Walker, quien falleció durante la producción, y por el emotivo homenaje que se le rinde al final.</p>
+                
+                <h3>Personajes Principales</h3>
+                <div class="characters">
+                    <div class="character">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjExNzA4MDYxN15BMl5BanBnXkFtZTcwOTI1MDAxOQ@@._V1_.jpg" alt="Dominic Toretto" class="character-img">
+                        <div class="character-name">Dominic Toretto</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/paul.jpg" alt="Brian O'Conner" class="character-img">
+                        <div class="character-name">Brian O'Conner</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/shaw.png" alt="Deckard Shaw" class="character-img">
+                        <div class="character-name">Deckard Shaw</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/ortiz.jpg" alt="Letty Ortiz" class="character-img">
+                        <div class="character-name">Letty Ortiz</div>
+                    </div>
+                </div>
+                
+                <h3>Información de la Película</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Año</div>
+                        <div class="season-year">2015</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Director</div>
+                        <div class="season-year">James Wan</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Duración</div>
+                        <div class="season-year">137 min</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Presupuesto</div>
+                        <div class="season-year">$190 millones</div>
+                    </div>
+                </div>
+                
+                <h3>Recepción Crítica</h3>
+                <div class="rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-value">7.1/10</div>
+                    <div>(IMDb)</div>
+                </div>
+                <p>Rápidos y Furiosos 7 fue un éxito comercial masivo, recaudando más de $1.500 millones 
+                    en todo el mundo. La película fue aclamada por sus secuencias de acción y por 
+                    el emotivo homenaje a Paul Walker al final de la película.</p>
+
+    <script>
+        const detailsBtn = document.getElementById('detailsBtn');
+        const detailsContent = document.getElementById('detailsContent');
+        
+        detailsBtn.addEventListener('click', function() {
+            detailsContent.classList.toggle('active');
+            detailsBtn.classList.toggle('active');
+            
+            if (detailsBtn.classList.contains('active')) {
+                detailsBtn.textContent = 'Ocultar Detalles';
+            } else {
+                detailsBtn.textContent = 'Ver Detalles';
+            }
+        });
+    </script>
+</body>
+</html>

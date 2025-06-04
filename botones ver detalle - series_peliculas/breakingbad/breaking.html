@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad - Detalles</title>
+    <link rel="stylesheet" href="breaking.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>BREAKING BAD</h1>
+                <p class="short-description">Un profesor de química con cáncer se asocia a un exalumno para fabricar y vender metanfetamina con el fin de asegurar el futuro económico de su familia.</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <button class="details-btn" id="detailsBtn">Ver Detalles</button>
+            
+            <div class="details-content" id="detailsContent">
+                <h3>Sinopsis Completa</h3>
+                <p>Breaking Bad sigue la transformación de Walter White, un profesor de química de secundaria en Albuquerque, Nuevo México, en un despiadado narcotraficante conocido como "Heisenberg" después de ser diagnosticado con cáncer de pulmón inoperable. Junto con su exalumno Jesse Pinkman, Walter se adentra en el mundo de las drogas para asegurar el futuro financiero de su familia.</p>
+                
+                <p>A lo largo de cinco temporadas, la serie explora las consecuencias del descenso de Walter a la criminalidad, afectando a su familia, amigos y a sí mismo. La trama se desarrolla con giros inesperados y una tensión creciente mientras Walter se enfrenta a rivales peligrosos y a las fuerzas de la ley.</p>
+                
+                <h3>Personajes Principales</h3>
+                <div class="characters">
+                    <div class="character">
+                        <img src="/img/walter.png" alt="Walter White" class="character-img">
+                        <div class="character-name">Walter White</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/Jesse.jpg" alt="Jesse Pinkman" class="character-img">
+                        <div class="character-name">Jesse Pinkman</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/sky.png" alt="Skyler White" class="character-img">
+                        <div class="character-name">Skyler White</div>
+                    </div>
+                    <div class="character">
+                        <img src="/img/Hank.png" alt="Hank Schrader" class="character-img">
+                        <div class="character-name">Hank Schrader</div>
+                    </div>
+                </div>
+                
+                <h3>Temporadas</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Temporada 1</div>
+                        <div class="season-year">2008</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 2</div>
+                        <div class="season-year">2009</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 3</div>
+                        <div class="season-year">2010</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 4</div>
+                        <div class="season-year">2011</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Temporada 5</div>
+                        <div class="season-year">2012-2013</div>
+                    </div>
+                </div>
+                
+                <h3>Recepción Crítica</h3>
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-value">9.5/10</div>
+                    <div>(IMDb)</div>
+                </div>
+                <p>Breaking Bad es considerada como una de las mejores series de televisión de todos los tiempos.</p>
+                
+                <h3>Datos Curiosos</h3>
+                <div class="seasons">
+                    <div class="season">
+                        <div class="season-number">Química real</div>
+                        <div class="season-year">Asesor científico</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Albuquerque</div>
+                        <div class="season-year">Filmada en Nuevo México</div>
+                    </div>
+                    <div class="season">
+                        <div class="season-number">Récord Guinness</div>
+                        <div class="season-year">Mejor serie valorada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const detailsBtn = document.getElementById('detailsBtn');
+        const detailsContent = document.getElementById('detailsContent');
+        
+        detailsBtn.addEventListener('click', function() {
+            detailsContent.classList.toggle('active');
+            detailsBtn.classList.toggle('active');
+            
+            if (detailsBtn.classList.contains('active')) {
+                detailsBtn.textContent = 'Ocultar Detalles';
+            } else {
+                detailsBtn.textContent = 'Ver Detalles';
+            }
+        });
+    </script>
+</body>
+</html>
